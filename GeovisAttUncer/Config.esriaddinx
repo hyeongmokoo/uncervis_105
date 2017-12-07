@@ -1,0 +1,54 @@
+﻿<ESRI.Configuration xmlns="http://schemas.esri.com/Desktop/AddIns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>GeovisAttUncer</Name>
+  <AddInID>{fa8b7733-8bef-463c-8101-274cf919fb44}</AddInID>
+  <Description>Bivariate mapping for attribute uncertainty visualization</Description>
+  <Version>1.0</Version>
+  <Image>Images\GeovisAttUncer.png</Image>
+  <Author>Hyeongmo Koo</Author>
+  <Company>The University of Texas at Dallas</Company>
+  <Date>12/6/2017</Date>
+  <Targets>
+    <Target name="Desktop" version="10.5" />
+  </Targets>
+  <AddIn language="CLR" library="GeovisAttUncer.dll" namespace="GeovisAttUncer">
+    <ArcMap>
+      <Commands>
+        <Button id="The_University_of_GeovisAttUncer_OSCM" class="OSCM" message="" caption="Overlaid symbols on a choropleth map" tip="Overlaid symbols on a choropleth map" category="Add-In Controls" />
+        <Button id="The_University_of_GeovisAttUncer_CS" class="CS" message="" caption="Composite symbol " tip="Composite symbol " category="Add-In Controls" />
+        <Button id="The_University_of_GeovisAttUncer_CPPS" class="CPPS" message="" caption="Coloring properties for proportional symbols " tip="Coloring properties for proportional symbols " category="Add-In Controls" />
+      </Commands>
+      <DockableWindows>
+        <DockableWindow id="The_University_of_GeovisAttUncer_OSCM_win" class="OSCM_win+AddinImpl" caption="Overlaid Symbols on a Choropleth Map" image="Images\OSCM_win.png">
+          <InitialPlacement height="262" width="589" state="unpinned" position="right" />
+        </DockableWindow>
+        <DockableWindow id="The_University_of_GeovisAttUncer_CPPS_win" class="CPPS_win+AddinImpl" caption="Coloring Properties for Proportional Symbols " image="Images\CPPS_win.png">
+          <InitialPlacement height="254" width="391" state="unpinned" position="right" />
+        </DockableWindow>
+        <DockableWindow id="The_University_of_GeovisAttUncer_CS_win" class="CS_win+AddinImpl" caption="Composite Symbol" image="Images\CS_win.png">
+          <InitialPlacement height="248" width="417" state="unpinned" position="right" />
+        </DockableWindow>
+      </DockableWindows>
+      <Menus>
+        <Menu id="The_University_of_GeovisAttUncer_Geovisualizing_Attribute_Uncertainty" caption="Geovisualizing Attribute Uncertainty " isRootMenu="false">
+          <Items>
+            <Button refID="The_University_of_GeovisAttUncer_OSCM" />
+            <Button refID="The_University_of_GeovisAttUncer_CPPS" />
+            <Button refID="The_University_of_GeovisAttUncer_CS" />
+          </Items>
+        </Menu>
+      </Menus>
+      <Toolbars>
+        <Toolbar id="The_University_of_GeovisAttUncer_Geovisualizing_attribute_uncertainty" caption="Geovisualizing attribute uncertainty " showInitially="false">
+          <Items>
+            <Menu refID="The_University_of_GeovisAttUncer_Geovisualizing_Attribute_Uncertainty" />
+          </Items>
+        </Toolbar>
+        <Toolbar id="The_University_of_GeovisAttUncer_Uncertainty_Visualization" caption="Uncertainty Visualization" showInitially="false">
+          <Items>
+            <Menu refID="The_University_of_GeovisAttUncer_Geovisualizing_Attribute_Uncertainty" />
+          </Items>
+        </Toolbar>
+      </Toolbars>
+    </ArcMap>
+  </AddIn>
+</ESRI.Configuration>
