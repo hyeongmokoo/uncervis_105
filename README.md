@@ -6,4 +6,4 @@ Geovisualization of attribute uncertainty helps users to recognize underlying pr
 
 Specifically, three types of visualization tools are available: overlaid symbols on a choropleth map, coloring properties to a proportional symbol map, and composite symbols.
 
-For more detail, please see http://www.geocomputation.org/2015/papers/GC15_38.pdf
+For more detail, please see https://www.sciencedirect.com/science/article/pii/S1045926X15300070
